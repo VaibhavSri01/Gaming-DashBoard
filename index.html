@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gamified Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <div id="login-section" class="card glass">
+    <h2>Login to Your Dashboard</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="dashboard" class="card glass" style="display:none;">
+    <h2>Welcome, <span id="user-email"></span>👋</h2>
+    <div class="stats">
+      <p><strong>XP:</strong> <span id="xp">0</span></p>
+      <p><strong>Level:</strong> <span id="level">1</span></p>
+      <p><strong>Streak:</strong> <span id="streak">0</span></p>
+      <p><strong>Last Action:</strong> <span id="lastAction">-</span></p>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="xpBar"></div>
+    </div>
+    <p id="rewardMsg">Start earning XP!</p>
+
+    <h3>Mood Check-in </h3>
+    <textarea id="moodText" placeholder="How are you feeling today?"></textarea>
+    <button onclick="saveMood()">Save Mood</button>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
